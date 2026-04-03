@@ -317,6 +317,9 @@ func (p *cidrPool) updatePool(CIDRs []string) {
 		if _, ok := existingAllocators[cidrStr]; ok {
 			continue
 		}
+		if _, ok := p.released[cidrStr]; ok {
+			continue
+		}
 		ipAllocator := ipallocator.NewCIDRRange(prefix, rangeOpts...)
 		if ipAllocator.Free() == 0 {
 			p.logger.Error(
