@@ -449,17 +449,23 @@ jobs:
       - name: Determine the CIDR of fake external targets
         id: external_cidr
         run: |
+          aws eks describe-nodegroup \
+            --cluster-name ${{ steps.setup-cluster.outputs.cluster_name }} \
+            --nodegroup-name ng-amd64-external
           SUBNETS=$(aws eks describe-nodegroup \
             --cluster-name ${{ steps.setup-cluster.outputs.cluster_name }} \
             --nodegroup-name ng-amd64-external \
             --query 'nodegroup.subnets' \
             --output text)
           echo "Subnets: $SUBNETS"
+          aws ec2 describe-subnets \
+            --subnet-ids $SUBNETS
           CIDRS=$(aws ec2 describe-subnets \
             --subnet-ids $SUBNETS \
             --query 'Subnets[].CidrBlock' \
             --output text)
           echo "CIDRs: $CIDRS"
+          kubectl get nodes -o wide
           exit 1
           #echo "ipv4_external_cidr=$CIDRV4" >> $GITHUB_OUTPUT
           #echo "ipv6_external_cidr=$CIDRV6" >> $GITHUB_OUTPUT
