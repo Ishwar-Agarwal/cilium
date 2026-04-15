@@ -16,7 +16,7 @@ require (
 	github.com/aws/smithy-go v1.24.3
 	github.com/blang/semver/v4 v4.0.0
 	github.com/cespare/xxhash/v2 v2.3.0
-	github.com/cilium/charts v0.0.0-20260401193212-853ba84e802b
+	github.com/cilium/charts c2d424feced0
 	github.com/cilium/coverbee v0.3.3-0.20240723084546-664438750fce
 	github.com/cilium/dns v1.1.51-0.20240603182237-af788769786a
 	github.com/cilium/ebpf v0.21.0
@@ -67,7 +67,7 @@ require (
 	github.com/kevinburke/ssh_config v1.6.0
 	github.com/lthibault/jitterbug/v2 v2.2.2
 	github.com/mackerelio/go-osstat v0.2.7
-	github.com/mattn/go-shellwords v1.0.12
+	github.com/mattn/go-shellwords v1.0.13
 	github.com/mdlayher/arp v0.0.0-20220512170110-6706a2966875
 	github.com/mdlayher/ethernet v0.0.0-20220221185849-529eae5b6118
 	github.com/mdlayher/ndp v1.1.0
@@ -120,7 +120,7 @@ require (
 	golang.org/x/time v0.15.0
 	golang.org/x/tools v0.44.0
 	golang.zx2c4.com/wireguard/wgctrl v0.0.0-20241231184526-a9ab2273dd10
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260406210006-6f92a3bedf2d
+	google.golang.org/genproto/googleapis/rpc afd174a4e478
 	google.golang.org/grpc v1.80.0
 	google.golang.org/protobuf v1.36.11
 	helm.sh/helm/v4 v4.1.4
@@ -139,8 +139,8 @@ require (
 	sigs.k8s.io/gateway-api v1.5.1
 	sigs.k8s.io/gateway-api/conformance v1.5.1
 	sigs.k8s.io/mcs-api v0.3.1-0.20260224125735-0f775a3eff97
-	sigs.k8s.io/mcs-api/conformance v0.0.0-20260403094305-4b9911b73f14
-	sigs.k8s.io/mcs-api/controllers v0.0.0-20260403094305-4b9911b73f14
+	sigs.k8s.io/mcs-api/conformance 1a2379166c5e
+	sigs.k8s.io/mcs-api/controllers 1a2379166c5e
 	sigs.k8s.io/network-policy-api v0.1.8-0.20260408165732-72895f2a4a97
 	sigs.k8s.io/yaml v1.6.0
 )
